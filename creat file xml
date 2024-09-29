@@ -1,0 +1,26 @@
+import java.io.File
+
+fun createInitialXmlFile(filePath: String) {
+    val xmlContent = """
+        <?xml version="1.0" encoding="UTF-8"?>
+        <stagiers>
+        </stagiers>
+    """.trimIndent()
+
+    // Create a File object and write the initial XML content to it
+    val file = File(filePath)
+    file.writeText(xmlContent)
+    println("Initial XML file created at ${file.absolutePath}")
+}
+
+fun main() {
+    // Define the file path where the XML file will be stored
+    val filePath = "C:/Users/chouk/Documents/stagiers.xml"
+
+    // Create the XML file if it does not exist
+    if (!File(filePath).exists()) {
+        createInitialXmlFile(filePath)
+    } else {
+        println("XML file already exists at $filePath")
+    }
+}
