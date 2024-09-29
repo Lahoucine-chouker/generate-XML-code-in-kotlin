@@ -7,6 +7,7 @@ import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.OutputKeys
 
 fun main() {
+    //Changed 'Chouk' to your user.
     val filePath = "C:/Users/chouk/Documents/users.xml"
 
     if (!File(filePath).exists()) {
